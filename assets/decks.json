@@ -1,0 +1,53 @@
+[
+  {
+    "id": "01",
+    "name": "Rick and Morty",
+    "caption": "Images from: samueljellis.deviantart.com",
+    "cards": [
+      "Rick",
+      "Morty",
+      "Summer",
+      "Beth",
+      "Jerry",
+      "Mr. Poopy Butthole",
+      "Abradolf Lincler",
+      "Mr. Meeseeks",
+      "Bird Person",
+      "Scary Terry"
+    ]
+  },
+  {
+    "id": "02",
+    "name": "Squares",
+    "caption": "For people with a crazy memory.",
+    "cards": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10"
+    ]
+  },
+  {
+    "id": "03",
+    "name": "South Park",
+    "caption": "Respect My Authoritah",
+    "cards": [
+      "Eric",
+      "Kenny",
+      "Kyle",
+      "Stan",
+      "Chef",
+      "Ike",
+      "Clyde",
+      "Butters",
+      "Token",
+      "Jimmy"
+    ]
+  }
+]

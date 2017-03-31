@@ -1,0 +1,233 @@
+html {
+  font-family: Arial;
+}
+body {
+  background: #00ae5a;
+}
+#paused {
+  display: none;
+}
+#paused .paused-content {
+  background: #FFF;
+  box-shadow: 0 0 10px -2px #000;
+  height: auto;
+  left: 50%;
+  max-width: 100%;
+  position: fixed;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 300px;
+  z-index: 105;
+}
+#paused .paused-content > h2 {
+  background: #00ae5a;
+  color: #FFF;
+  margin: 0;
+  padding: 10px 5px;
+  text-align: center;
+  width: 100%;
+}
+#paused .paused-content.game-over > h2 {
+  background: #ae0000;
+}
+#paused .paused-content > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#paused .paused-content > ul > li {
+  cursor: pointer;
+  border-bottom: 1px solid #EEE;
+  padding: 10px;
+  text-align: center;
+}
+#paused .paused-content > ul > li:hover {
+  background: #EEE;
+}
+#paused .paused-content > div {
+  font-size: 50%;
+  padding: 10px;
+  text-align: center;
+}
+#paused .backdrop {
+  background: #222;
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+#loading {
+  bottom: 0;
+}
+#play_area {
+  display: none;
+}
+#play_area #pause_button {
+  position: absolute;
+  z-index: 100;
+}
+#play_area #pause_button > div {
+  background: #222222;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  line-height: 23px;
+  margin: -25px 0 0 -25px;
+  position: absolute;
+  text-align: center;
+  width: 25px;
+}
+#play_area #pause_button > button {
+  cursor: pointer;
+  background: #3c3c3c;
+  border-radius: 0;
+  display: inline-block;
+  font-size: 11px;
+  height: 25px;
+  line-height: 9px;
+  margin-top: -25px;
+  position: absolute;
+}
+#play_area #pause_button:not(:hover) > button {
+  display: none;
+}
+#play_area #field {
+  margin: 20px auto;
+  width: 1050px;
+}
+#select, #loading_deck {
+  background: #FFFFFF;
+  box-shadow: 0 0 20px -2px #222222;
+  left: 50%;
+  padding: 20px 0;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+}
+#loading_deck {
+  display: none;
+  z-index: 1000;
+}
+#select > h5, #loading_deck > h5 {
+  color: #00ae5a;
+  text-transform: lowercase;
+}
+#select #game_difficulty {
+  margin-bottom: 30px;
+}
+#select #game_difficulty > a, #random_deck {
+  cursor: pointer;
+  margin: 2.5px;
+}
+section.cards > article {
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+	perspective: 1000px;
+  transition: opacity 0.5s;
+}
+section.cards > article.flipped .flipper, section.cards > article.won .flipper, section.cards.hover-cards > article:hover .flipper, section.cards.inverted-cards > article .flipper {
+	transform: rotateY(180deg);
+}
+section.cards.inverted-cards > article.flipped .flipper, section.cards.hover-cards.inverted-cards > article:hover .flipper {
+  transform: rotateY(0deg);
+}
+section.cards > article, section.cards > article .flip-front, section.cards > article .flip-back {
+  border-radius: 9px;
+  height: 250px;
+  width: 200px;
+}
+section.cards.small-cards > article, section.cards.small-cards > article .flip-front, section.cards.small-cards > article .flip-back {
+  border-radius: 4px;
+  height: 112.5px;
+  width: 90px;
+}
+section.cards > article .flip-front, section.cards > article .flip-back {
+  background-image: url(../img/cardback.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0 0 10px -2px #000;
+}
+section.cards > article .flip-front {
+  background-color: #F44336;
+}
+section.cards > article .flip-back {
+  background-color: #009688;
+}
+section.cards > article.won {
+  opacity: 0.5;
+}
+section.cards > article .flipper {
+  position: relative;
+  transform-style: preserve-3d;
+	transition: 0.6s;
+}
+section.cards > article .flip-front, section.cards > article .flip-back {
+	backface-visibility: hidden;
+  left: 0;
+	position: absolute;
+	top: 0;
+}
+section.cards > article .flip-front {
+	transform: rotateY(0deg);
+  z-index: 2;
+}
+section.cards > article .flip-back {
+	transform: rotateY(180deg);
+}
+#deck_info {
+  background: #eee;
+  border-radius: 9px;
+  box-shadow: 0 0 10px -2px #000;
+  margin: 20px auto 0;
+  padding: 30px;
+  width: 1040px;
+}
+#deck_info h1, #deck_info p {
+  margin: 0;
+}
+#deck_info .col-sm-2 {
+  text-align: center;
+}
+@media(max-width: 1066px){
+  #select {
+    position: initial;
+    transform: none;
+  }
+  #deck_info {
+    border-radius: 0;
+    width: 100%;
+  }
+  #field {
+    text-align: center;
+    width: 100%!important;
+  }
+  .sm-hide {
+    display: none!important;
+  }
+}
+html.dark body {
+  background-color: #424242;
+}
+html.dark section.cards > article .flip-front {
+  background-color: #222;
+}
+html.dark section.cards > article .flip-back {
+  background-color: #525252;
+}
+html.dark .btn-success {
+  background: #EEE;
+  border-color: #DDD;
+}
+html.dark .btn-danger {
+  background: #222;
+  border-color: #000;
+  color: #EEE;
+}
